@@ -1,0 +1,12 @@
+# Step 21
+If(IsMatch(txtCourseCode.Text,Match.Letter&Match.Letter&Match.Hyphen&Match.Digit&Match.Digit&Match.Digit),txtCourseCode.Text)
+
+# Step 22
+If(!IsBlank(LookUp(["London","Manchester","Glasgow"],Value=txtLocation.Text).Value),txtLocation.Text)
+
+# Step 23
+If(!dcdCourseCode.Valid,"- Course code required in format AA-000"&Char(13)&Char(10))&
+If(!dcdLocation.Valid,"- Location required, must be one of 'London', 'Manchester' or 'Glasgow'"&Char(13)&Char(10))&
+If(IsBlank(dteStartDate.SelectedDate),"- Start date required"&Char(13)&Char(10))&
+If(IsBlank(dteEndDate.SelectedDate),"- End date required"&Char(13)&Char(10))&
+If(dteStartDate.SelectedDate>dteEndDate.SelectedDate,"- Start date can not be later than end date")
