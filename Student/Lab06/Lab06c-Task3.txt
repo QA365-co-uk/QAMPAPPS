@@ -1,0 +1,2 @@
+# Step 28
+base64ToBinary(triggerBody()[text_1])

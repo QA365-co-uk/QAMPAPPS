@@ -1,0 +1,60 @@
+# Step 17
+If(
+    drpEquipType.Selected.Value = "All",
+    colEquipment,
+    Filter(
+        colEquipment,
+        Category.Value = drpEquipType.Selected.Value
+    )
+)
+
+# Step 30
+ClearCollect(
+    colAddedEmpRecord,
+    Patch(
+        Employees,
+        Defaults(Employees),
+        {Title: txtEmployeeID.Text},
+        {FullName: txtName.Text},
+        {Department: txtDepartment.Text},
+        {JobTitle: txtJobTitle.Text},
+        {
+            StartUpCost: Sum(
+                colSelectEquip,
+                UnitPrice * Quantity
+            )
+        },
+        {
+            Location: {
+                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                Id: 1,
+                Value: drpLocation.Selected.Value
+            }
+        }
+    )
+);
+ForAll(
+    colSelectEquip,
+    Patch(
+        NewStarterEquipment,
+        Defaults(NewStarterEquipment),
+        {NewStarterID: First(colAddedEmpRecord).ID},
+        {
+            Item: {
+                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                Id: ID,
+                Value: EquipmentName
+            }
+        },
+        {Quantity: Quantity},
+        {ItemTotalCost: UnitPrice * Quantity}
+    )
+);
+Clear(colSelectEquip);
+Reset(txtEmployeeID);
+Reset(txtName);
+Reset(txtDepartment);
+Reset(txtJobTitle);
+Reset(drpLocation);
+Reset(drpEquipType)
+
