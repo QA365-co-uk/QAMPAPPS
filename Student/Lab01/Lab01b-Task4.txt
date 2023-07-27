@@ -1,0 +1,5 @@
+# 12-Color code
+If(Value(galTasks.Selected.ProgressPercent)<25,Color.Red,Value(galTasks.Selected.ProgressPercent)<50,Color.Orange,Value(galTasks.Selected.ProgressPercent)<75,Color.Blue,Color.Green)
+
+# 12-Icon code
+If(Value(galTasks.Selected.ProgressPercent)<25,Icon.EmojiSad,Value(galTasks.Selected.ProgressPercent)<50,Icon.EmojiFrown,Value(galTasks.Selected.ProgressPercent)<75,Icon.EmojiNeutral,Icon.EmojiSmile)
