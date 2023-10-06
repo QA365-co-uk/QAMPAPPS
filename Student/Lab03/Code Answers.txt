@@ -45,33 +45,25 @@ Sort(
     Value
 )
 
-# Task 5 - Step 7
+# Task 5 - Step 6
 If(
     drpSortBy.SelectedText.Value = "None",
     Search(
-        If(
-            drpFilter.SelectedText.Value = Blank(),
+        Filter(
             colEquipment,
-            Filter(
-                colEquipment,
-                Category = drpFilter.SelectedText.Value
-            )
+            drpFilter.SelectedText.Value = Blank() Or Category = drpFilter.SelectedText.Value
         ),
         txtSearch.Text,
         "EquipmentName"
     ),
     SortByColumns(
         Search(
-            If(
-                drpFilter.SelectedText.Value = Blank(),
+            Filter(
                 colEquipment,
-                Filter(
-                    colEquipment,
-                    Category = drpFilter.SelectedText.Value
-                )
+                drpFilter.SelectedText.Value = Blank() Or Category = drpFilter.SelectedText.Value
             ),
-            txtSearch.Text,
-            "EquipmentName"
+        txtSearch.Text,
+        "EquipmentName"
         ),
         varSort
     )
