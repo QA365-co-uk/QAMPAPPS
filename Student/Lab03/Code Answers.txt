@@ -3,7 +3,7 @@ ClearCollect(
     colEquipment,
     AddColumns(
         EquipmentList,
-        "Available",
+        Available,
         "Yes"
     )
 )
@@ -24,13 +24,13 @@ If(
     Search(
         colEquipment,
         txtSearch.Text,
-        "EquipmentName"
+        EquipmentName
     ),
     SortByColumns(
         Search(
             colEquipment,
             txtSearch.Text,
-            "EquipmentName"
+            EquipmentName
         ),
         varSort
     )
@@ -54,7 +54,7 @@ If(
             drpFilter.SelectedText.Value = Blank() Or Category = drpFilter.SelectedText.Value
         ),
         txtSearch.Text,
-        "EquipmentName"
+        EquipmentName
     ),
     SortByColumns(
         Search(
@@ -63,7 +63,7 @@ If(
                 drpFilter.SelectedText.Value = Blank() Or Category = drpFilter.SelectedText.Value
             ),
         txtSearch.Text,
-        "EquipmentName"
+        EquipmentName
         ),
         varSort
     )
@@ -99,7 +99,7 @@ If(
         colEquipment,
         AddColumns(
             EquipmentList,
-            "Available",
+            Available,
             "Yes"
         )
     );
