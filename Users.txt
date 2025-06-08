@@ -1,8 +1,4 @@
-Al		QA@QADelegate01004343.onmicrosoft.com	D!969919133134on
-Chris G		QA@QADelegate01004344.onmicrosoft.com	K*489564230964os
-Chris K		QA@QADelegate01004345.onmicrosoft.com	B!401846510283ut
-Dean		QA@QADelegate01004346.onmicrosoft.com	W.067926705499of
-Jan		QA@QADelegate01004347.onmicrosoft.com	W.295134089842oh
-Jon		QA@QADelegate01004348.onmicrosoft.com	V@744575530972ug
-Magdalena	QA@QADelegate01004349.onmicrosoft.com	C!563964489022as
-Ryan		QA@QADelegate01004350.onmicrosoft.com	B#929395684480ug
+Charlie		QA@QADelegate01004378.onmicrosoft.com  Q#395372469957uw
+Miroslaw	QA@QADelegate01004379.onmicrosoft.com  Q(566463375142uv
+Nick		QA@QADelegate01004380.onmicrosoft.com  F*985805307581uq
+Rob		QA@QADelegate01004381.onmicrosoft.com  J.335772469777uk
