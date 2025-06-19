@@ -1,4 +1,4 @@
-# Step 17
+# Step 16
 If(
     drpEquipType.Selected.Value = "All",
     colEquipment,
@@ -8,7 +8,7 @@ If(
     )
 )
 
-# Step 30
+# Step 29
 ClearCollect(
     colAddedEmpRecord,
     Patch(

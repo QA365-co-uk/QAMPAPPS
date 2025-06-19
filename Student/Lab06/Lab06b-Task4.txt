@@ -27,4 +27,4 @@ Set(
         varBase64Only
     ).fileurl
 );
-Reset(uplSupportingDoc)
+ResetForm(frmFileUpload)
