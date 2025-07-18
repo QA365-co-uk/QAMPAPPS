@@ -26,8 +26,6 @@ ClearCollect(
         },
         {
             Location: {
-                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                Id: 1,
                 Value: drpLocation.Selected.Value
             }
         }
@@ -41,9 +39,8 @@ ForAll(
         {NewStarterID: First(colAddedEmpRecord).ID},
         {
             Item: {
-                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
                 Id: ID,
-                Value: EquipmentName
+                Value: ""
             }
         },
         {Quantity: Quantity},
